@@ -1,0 +1,70 @@
+# Root-level .gitignore for Reimburse-frontend (Angular) and Reimburse-api (.NET)
+
+# --- General ---
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# --- Reimburse-frontend (Angular) ---
+Reimburse-frontend/node_modules/
+Reimburse-frontend/dist/
+Reimburse-frontend/.angular/cache/
+Reimburse-frontend/.angular/cli/
+
+# Angular environment files
+Reimburse-frontend/src/environments/environment*.ts
+
+# Compiled TypeScript files
+Reimburse-frontend/**/*.js
+Reimburse-frontend/**/*.js.map
+
+# IDE-specific files
+Reimburse-frontend/.idea/
+Reimburse-frontend/.vscode/
+
+# --- Reimburse-api (.NET 8 REST API) ---
+Reimburse-api/[Bb]in/
+Reimburse-api/[Oo]bj/
+Reimburse-api/packages/
+
+# User-specific files
+Reimburse-api/*.user
+Reimburse-api/*.suo
+Reimburse-api/*.userprefs
+
+# Debug/Release directories
+Reimburse-api/[Dd]ebug/
+Reimburse-api/[Rr]elease/
+
+# NuGet packages and tools
+Reimburse-api/.nuget/
+Reimburse-api/project.lock.json
+Reimburse-api/project.fragment.lock.json
+
+# Local configuration files
+Reimburse-api/appsettings.Development.json
+Reimburse-api/appsettings.local.json
+
+# Test results and coverage reports
+Reimburse-api/TestResults/
+Reimburse-api/coverage/
+Reimburse-api/*.coverage*
+Reimburse-api/*.coveragexml
+
+# IDE-specific files (Visual Studio, Rider, VS Code)
+Reimburse-api/.vs/
+Reimburse-api/.idea/
+Reimburse-api/.vscode/
+
+# --- Global ---
+*.swp        # Swap files (e.g., Vim)
+*.swo        # Vim temporary files
+*.tmp        # Temporary files
+*.bak        # Backup files
+
