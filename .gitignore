@@ -1,5 +1,3 @@
-# Root-level .gitignore for Reimburse-frontend (Angular) and Reimburse-api (.NET)
-
 # --- General ---
 # Logs
 *.log
@@ -12,13 +10,16 @@ yarn-error.log*
 Thumbs.db
 
 # --- Reimburse-frontend (Angular) ---
-Reimburse-frontend/node_modules/
-Reimburse-frontend/dist/
-Reimburse-frontend/.angular/cache/
-Reimburse-frontend/.angular/cli/
+# Node modules and dependencies
+Reimburse-frontend/**/node_modules/
+
+# Build output directories (dist, aot, etc.)
+Reimburse-frontend/**/dist/
+Reimburse-frontend/**/aot/
+Reimburse-frontend/**/.angular/cache/
 
 # Angular environment files
-Reimburse-frontend/src/environments/environment*.ts
+Reimburse-frontend/**/src/environments/environment*.ts
 
 # Compiled TypeScript files
 Reimburse-frontend/**/*.js
@@ -29,33 +30,32 @@ Reimburse-frontend/.idea/
 Reimburse-frontend/.vscode/
 
 # --- Reimburse-api (.NET 8 REST API) ---
-Reimburse-api/[Bb]in/
-Reimburse-api/[Oo]bj/
-Reimburse-api/packages/
-
-# User-specific files
-Reimburse-api/*.user
-Reimburse-api/*.suo
-Reimburse-api/*.userprefs
-
-# Debug/Release directories
-Reimburse-api/[Dd]ebug/
-Reimburse-api/[Rr]elease/
+# Build artifacts (bin, obj)
+Reimburse-api/**/[Bb]in/
+Reimburse-api/**/[Oo]bj/
 
 # NuGet packages and tools
+Reimburse-api/**/packages/
 Reimburse-api/.nuget/
-Reimburse-api/project.lock.json
-Reimburse-api/project.fragment.lock.json
+
+# User-specific files
+Reimburse-api/**/*.user
+Reimburse-api/**/*.suo
+Reimburse-api/**/*.userprefs
+
+# Debug/Release directories
+Reimburse-api/**/[Dd]ebug/
+Reimburse-api/**/[Rr]elease/
 
 # Local configuration files
-Reimburse-api/appsettings.Development.json
-Reimburse-api/appsettings.local.json
+Reimburse-api/**/appsettings.Development.json
+Reimburse-api/**/appsettings.local.json
 
 # Test results and coverage reports
-Reimburse-api/TestResults/
-Reimburse-api/coverage/
-Reimburse-api/*.coverage*
-Reimburse-api/*.coveragexml
+Reimburse-api/**/TestResults/
+Reimburse-api/**/coverage/
+Reimburse-api/**/*.coverage*
+Reimburse-api/**/*.coveragexml
 
 # IDE-specific files (Visual Studio, Rider, VS Code)
 Reimburse-api/.vs/
@@ -67,4 +67,3 @@ Reimburse-api/.vscode/
 *.swo        # Vim temporary files
 *.tmp        # Temporary files
 *.bak        # Backup files
-
