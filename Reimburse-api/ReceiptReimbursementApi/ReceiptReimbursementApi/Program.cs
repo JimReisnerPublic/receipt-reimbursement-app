@@ -5,10 +5,15 @@ using ReceiptReimbursement.Data;
 using ReceiptReimbursement.Models;
 using ReceiptReimbursement.Services;
 using ReceiptReimbursementApi;
+using Microsoft.AspNetCore.Http.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 52428800; // 50MB
+});
 
 // Configure database context
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -113,28 +118,66 @@ app.MapPost("/api/receipts", async (Receipt receipt, IReceiptService service) =>
     return operation;
 });
 
-app.MapPost("/api/receipts/by-email", async (ReceiptEmailSubmission submission, IReceiptService service, IEmployeeService employeeService) =>
+app.MapPost("/api/receipts/by-email", async (HttpRequest request, IReceiptService service, IEmployeeService employeeService, IWebHostEnvironment env) =>
 {
     try
     {
-        // First, resolve the employee by email
-        var employee = await employeeService.GetEmployeeByEmailAsync(submission.EmployeeEmail);
-        if (employee == null)
+        var form = await request.ReadFormAsync();
+        var file = form.Files.GetFile("receiptFile");
+        if (file == null || file.Length == 0)
+            return Results.BadRequest(new { Message = "Receipt file is required" });
+
+        // Validate file type and size
+        var allowedExtensions = new[] { ".pdf", ".jpg", ".jpeg", ".png" };
+        var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
+        if (!allowedExtensions.Contains(extension))
+            return Results.BadRequest(new { Message = "Invalid file type. Allowed types: PDF, JPG, PNG" });
+        if (file.Length > 5 * 1024 * 1024)
+            return Results.BadRequest(new { Message = "File size exceeds 5MB limit" });
+
+        // Save file
+        var uploadsPath = Path.Combine(env.ContentRootPath, "Uploads");
+        Directory.CreateDirectory(uploadsPath);
+        var safeFileName = $"{Guid.NewGuid()}{extension}";
+        var filePath = Path.Combine(uploadsPath, safeFileName);
+        using (var stream = new FileStream(filePath, FileMode.Create))
         {
-            return Results.NotFound(new { Message = $"No employee found with email: " +
-                $"{submission.EmployeeEmail}" });
+            await file.CopyToAsync(stream);
         }
 
-        // Assign the correct employee ID to the receipt
-        submission.Receipt.EmployeeId = employee.Id;
+        // Parse form fields
+        var employeeEmail = form["employeeEmail"];
+        var date = DateTime.Parse(form["date"]);
+        var amount = decimal.Parse(form["amount"]);
+        var description = form["description"];
+        var category = form["category"];
 
-        // Create the receipt using the existing service
-        var newReceipt = await service.CreateReceiptAsync(submission.Receipt);
+        // Find employee
+        var employee = await employeeService.GetEmployeeByEmailAsync(employeeEmail);
+        if (employee == null)
+        {
+            return Results.NotFound(new { Message = $"No employee found with email: {employeeEmail}" });
+        }
+
+        // Create receipt
+        var receipt = new Receipt
+        {
+            EmployeeId = employee.Id,
+            Date = date,
+            Amount = amount,
+            Description = description,
+            Category = category,
+            Status = "Pending",
+            SubmissionDate = DateTime.Now,
+            ImageLocation = $"Uploads/{safeFileName}"
+        };
+
+        var newReceipt = await service.CreateReceiptAsync(receipt);
         return Results.Created($"/api/receipts/{newReceipt.Id}", newReceipt);
     }
     catch (ValidationException ex)
     {
-        return Results.BadRequest(new { Message = "Receipt validation error: " + ex.Message });
+        return Results.BadRequest(new { Message = "Validation error: " + ex.Message });
     }
     catch (Exception ex)
     {
@@ -143,7 +186,7 @@ app.MapPost("/api/receipts/by-email", async (ReceiptEmailSubmission submission, 
 })
 .WithName("CreateReceiptByEmail")
 .WithOpenApi(operation => {
-    operation.Summary = "Creates a new receipt using employee email instead of ID";
+    operation.Summary = "Creates a new receipt using employee email and file upload";
     return operation;
 });
 

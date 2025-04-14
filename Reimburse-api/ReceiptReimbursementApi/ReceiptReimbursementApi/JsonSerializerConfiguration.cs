@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 using ReceiptReimbursement.Models;
+using ReceiptReimbursementApi.Models;
 
 namespace ReceiptReimbursementApi
 {
@@ -9,6 +10,7 @@ namespace ReceiptReimbursementApi
     [JsonSerializable(typeof(Employee))]
     [JsonSerializable(typeof(List<Employee>))]
     [JsonSerializable(typeof(ReceiptEmailSubmission))]
+    [JsonSerializable(typeof(ErrorResponse))]
     public partial class AppJsonSerializerContext : JsonSerializerContext
     {
     }

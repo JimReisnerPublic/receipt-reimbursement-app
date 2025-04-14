@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Receipt } from '../models/receipt.model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,9 +24,18 @@ export class ReceiptService {
     return this.http.post<Receipt>(this.apiUrl, receipt);
   }
 
-  submitReceiptByEmail(submission: { employeeEmail: string, receipt: Receipt }): Observable<Receipt> {
-    return this.http.post<Receipt>(`${this.apiUrl}/by-email`, submission);
+  submitReceiptByEmail(formData: FormData): Observable<Receipt> {
+    return this.http.post<Receipt>(
+      `${this.apiUrl}/by-email`,
+      formData,
+      {
+        headers: new HttpHeaders({
+          // Let the browser set the correct Content-Type
+        })
+      }
+    );
   }
+  
 
   updateReceipt(id: number, receipt: Receipt): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, receipt);
