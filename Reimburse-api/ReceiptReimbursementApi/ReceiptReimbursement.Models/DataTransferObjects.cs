@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ReceiptReimbursement.Models
 {
-    class DataTransferObjects
+    public class ReceiptEmailSubmission
     {
+        public string EmployeeEmail { get; set; }
+        public Receipt Receipt { get; set; }
     }
+
 }

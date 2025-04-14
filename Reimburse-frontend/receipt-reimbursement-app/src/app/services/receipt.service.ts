@@ -23,6 +23,10 @@ export class ReceiptService {
     return this.http.post<Receipt>(this.apiUrl, receipt);
   }
 
+  submitReceiptByEmail(submission: { employeeEmail: string, receipt: Receipt }): Observable<Receipt> {
+    return this.http.post<Receipt>(`${this.apiUrl}/by-email`, submission);
+  }
+
   updateReceipt(id: number, receipt: Receipt): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, receipt);
   }

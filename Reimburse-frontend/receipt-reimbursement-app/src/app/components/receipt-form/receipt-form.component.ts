@@ -21,7 +21,7 @@ export class ReceiptFormComponent {
     private router: Router
   ) {
     this.receiptForm = this.fb.group({
-      employeeId: [1, Validators.required], // Default to logged-in user in a real app
+      employeeEmail: ['', [Validators.required, Validators.email]],
       date: [new Date(), Validators.required],
       amount: ['', [Validators.required, Validators.min(0.01)]],
       description: ['', [Validators.required, Validators.maxLength(500)]],
@@ -32,20 +32,30 @@ export class ReceiptFormComponent {
 
   onSubmit(): void {
     if (this.receiptForm.valid) {
-      const receipt = {
-        ...this.receiptForm.value,
-        status: 'Pending',
-        submissionDate: new Date()
+      const { employeeEmail, ...receiptData } = this.receiptForm.value;
+      const submission = {
+        employeeEmail: employeeEmail,
+        receipt: {
+          ...receiptData,
+          status: 'Pending',
+          submissionDate: new Date()
+        }
       };
 
-      this.receiptService.submitReceipt(receipt).subscribe({
+      this.receiptService.submitReceiptByEmail(submission).subscribe({
         next: () => {
           alert('Receipt submitted successfully!');
           this.router.navigate(['/receipts']);
         },
         error: (err) => {
           console.error('Error submitting receipt', err);
-          alert('Failed to submit receipt');
+          const errorMessage = err.error?.message || 'Failed to submit receipt. Please try again later.';
+          
+          if (err.status === 404) {
+            alert(`Employee not found: ${errorMessage}`);
+          } else {
+            alert(errorMessage);
+          }
         }
       });
     }

@@ -12,5 +12,6 @@ namespace ReceiptReimbursement.Services
         Task<bool> UpdateEmployeeAsync(Employee employee);
         Task<bool> DeleteEmployeeAsync(int id);
         Task<IEnumerable<Receipt>> GetEmployeeReceiptsAsync(int employeeId);
+        Task<Employee> GetEmployeeByEmailAsync(string email);
     }
 }

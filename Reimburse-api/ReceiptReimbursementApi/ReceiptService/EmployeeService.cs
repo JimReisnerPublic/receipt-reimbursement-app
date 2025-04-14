@@ -86,5 +86,14 @@ namespace ReceiptReimbursement.Services
                 return false;
             }
         }
+        public async Task<Employee> GetEmployeeByEmailAsync(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                throw new ValidationException("Employee email is required");
+            }
+
+            return await _employeeRepository.GetByEmailAsync(email);
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace ReceiptReimbursement.Data
         Task<bool> DeleteAsync(int id);
         Task<IEnumerable<Receipt>> GetEmployeeReceiptsAsync(int employeeId);
         Task<bool> EmployeeExistsAsync(int id);
+        Task<Employee> GetByEmailAsync(string email);
     }
     public class EmployeeRepository : IEmployeeRepository
     {
@@ -82,5 +83,12 @@ namespace ReceiptReimbursement.Data
         {
             return await _context.Employees.AnyAsync(e => e.Id == id);
         }
+
+        public async Task<Employee> GetByEmailAsync(string email)
+        {
+            return await _context.Employees
+                .FirstOrDefaultAsync(e => e.Email.ToLower() == email.ToLower());
+        }
+
     }
 }

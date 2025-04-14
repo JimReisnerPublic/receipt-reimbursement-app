@@ -113,6 +113,41 @@ app.MapPost("/api/receipts", async (Receipt receipt, IReceiptService service) =>
     return operation;
 });
 
+app.MapPost("/api/receipts/by-email", async (ReceiptEmailSubmission submission, IReceiptService service, IEmployeeService employeeService) =>
+{
+    try
+    {
+        // First, resolve the employee by email
+        var employee = await employeeService.GetEmployeeByEmailAsync(submission.EmployeeEmail);
+        if (employee == null)
+        {
+            return Results.NotFound(new { Message = $"No employee found with email: " +
+                $"{submission.EmployeeEmail}" });
+        }
+
+        // Assign the correct employee ID to the receipt
+        submission.Receipt.EmployeeId = employee.Id;
+
+        // Create the receipt using the existing service
+        var newReceipt = await service.CreateReceiptAsync(submission.Receipt);
+        return Results.Created($"/api/receipts/{newReceipt.Id}", newReceipt);
+    }
+    catch (ValidationException ex)
+    {
+        return Results.BadRequest(new { Message = "Receipt validation error: " + ex.Message });
+    }
+    catch (Exception ex)
+    {
+        return Results.BadRequest(new { Message = ex.Message });
+    }
+})
+.WithName("CreateReceiptByEmail")
+.WithOpenApi(operation => {
+    operation.Summary = "Creates a new receipt using employee email instead of ID";
+    return operation;
+});
+
+
 app.MapPut("/api/receipts/{id}", async (int id, Receipt receipt, IReceiptService service) =>
 {
     if (id != receipt.Id)
