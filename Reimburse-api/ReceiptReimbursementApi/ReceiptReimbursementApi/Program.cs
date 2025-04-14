@@ -6,6 +6,7 @@ using ReceiptReimbursement.Models;
 using ReceiptReimbursement.Services;
 using ReceiptReimbursementApi;
 using Microsoft.AspNetCore.Http.Features;
+using ReceiptReimbursementApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -125,13 +126,17 @@ app.MapPost("/api/receipts/by-email", async (HttpRequest request, IReceiptServic
         var form = await request.ReadFormAsync();
         var file = form.Files.GetFile("receiptFile");
         if (file == null || file.Length == 0)
-            return Results.BadRequest(new { Message = "Receipt file is required" });
+            return Results.BadRequest(new ErrorResponse { Message = "Receipt file is required" });
 
         // Validate file type and size
+        // Note: would normally put this type of logic in the service layer
+        //To do so, I would have had to used Microsoft.AspNetCore.Http.Features, which
+        //I thought is more appropriate in the controller instead of service layer
+
         var allowedExtensions = new[] { ".pdf", ".jpg", ".jpeg", ".png" };
         var extension = Path.GetExtension(file.FileName).ToLowerInvariant();
         if (!allowedExtensions.Contains(extension))
-            return Results.BadRequest(new { Message = "Invalid file type. Allowed types: PDF, JPG, PNG" });
+            return Results.BadRequest(new ErrorResponse { Message = "Invalid file type. Allowed types: PDF, JPG, PNG" });
         if (file.Length > 5 * 1024 * 1024)
             return Results.BadRequest(new { Message = "File size exceeds 5MB limit" });
 
@@ -156,7 +161,10 @@ app.MapPost("/api/receipts/by-email", async (HttpRequest request, IReceiptServic
         var employee = await employeeService.GetEmployeeByEmailAsync(employeeEmail);
         if (employee == null)
         {
-            return Results.NotFound(new { Message = $"No employee found with email: {employeeEmail}" });
+            return Results.NotFound(new ErrorResponse
+            { 
+                Message = $"No employee found with email: {employeeEmail}"
+            });
         }
 
         // Create receipt

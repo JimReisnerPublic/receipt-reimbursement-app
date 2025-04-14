@@ -21,4 +21,20 @@ export class ReceiptListComponent {
       this.receipts = receipts;
     });
   }
+
+  deleteReceipt(id: number): void {
+    if (confirm('Are you sure you want to delete this receipt?')) {
+      this.receiptService.deleteReceipt(id).subscribe({
+        next: () => {
+          // Refresh the list after deletion
+          this.receipts = this.receipts.filter(r => r.id !== id);
+          alert('Receipt deleted successfully!');
+        },
+        error: (err) => {
+          console.error('Error deleting receipt', err);
+          alert('Failed to delete receipt. Please try again.');
+        }
+      });
+    }
+  }
 }

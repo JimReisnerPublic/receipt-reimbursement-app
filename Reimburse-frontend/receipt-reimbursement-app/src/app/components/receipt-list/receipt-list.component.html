@@ -29,6 +29,11 @@
                 {{ receipt.status }}
               </span>
             </td>
+            <td>
+              <button (click)="deleteReceipt(receipt.id!)" class="delete-btn">
+                Delete
+              </button>
+            </td>
           </tr>
           <tr *ngIf="receipts.length === 0">
             <td colspan="5" class="no-data">No receipts found.</td>

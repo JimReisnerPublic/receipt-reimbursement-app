@@ -23,9 +23,10 @@ export class ReceiptFormComponent {
     private receiptService: ReceiptService,
     private router: Router
   ) {
+    const today = new Date().toISOString().substring(0, 10); // Format as yyyy-MM-dd
     this.receiptForm = this.fb.group({
       employeeEmail: ['', [Validators.required, Validators.email]],
-      date: [new Date().toISOString().substring(0, 10), Validators.required], // Store as yyyy-MM-dd
+      date: [today, Validators.required], 
       amount: ['', [Validators.required, Validators.min(0.01)]],
       description: ['', [Validators.required, Validators.maxLength(500)]],
       category: ['', Validators.required],
@@ -33,13 +34,26 @@ export class ReceiptFormComponent {
     });
   }
 
-  onFileSelected(event: any) {
-    const file = event.target.files[0];
-    if (file) {
-      this.selectedFile = file;
-      this.receiptForm.patchValue({ receiptFile: file });
+onFileSelected(event: any) {
+  const file = event.target.files[0];
+  if (file) {
+    // Clear previous messages
+    this.infoMessage = '';
+    
+    // Check file size (5MB limit)
+    if (file.size > 5 * 1024 * 1024) {
+      this.infoMessage = 'File size exceeds 5MB limit. Please choose a smaller file.';
+      this.selectedFile = null;
+      this.receiptForm.patchValue({ receiptFile: null });
+      event.target.value = ''; // Clear the file input
+      alert(this.infoMessage);
+      return;
     }
+    
+    this.selectedFile = file;
+    this.receiptForm.patchValue({ receiptFile: file });
   }
+}
 
 onSubmit(): void {
   this.infoMessage = ''; // Clear previous messages
@@ -59,7 +73,14 @@ onSubmit(): void {
     this.receiptService.submitReceiptByEmail(formData).subscribe({
       next: () => {
         alert('Receipt submitted successfully!');
-        this.router.navigate(['/receipts']);
+        // Reset the form and clear the file
+        this.receiptForm.reset();
+        this.selectedFile = null;
+        
+        // Reset the date field to today's date
+        const today = new Date().toISOString().substring(0, 10);
+        this.receiptForm.patchValue({ date: today });
+        this.router.navigate(['/receipt-form']);
       },
       error: (err) => {
         console.error('Error submitting receipt', err);
