@@ -9,6 +9,13 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
+# Build artifacts and index files
+*.bin
+*.idx
+*.index
+*.dat
+*.db
+
 # --- Reimburse-frontend (Angular) ---
 # Node modules and dependencies
 Reimburse-frontend/**/node_modules/
@@ -67,3 +74,14 @@ Reimburse-api/.vscode/
 *.swo        # Vim temporary files
 *.tmp        # Temporary files
 *.bak        # Backup files
+
+# Additional build artifacts
+*.cache
+*.compiled
+*.pdb
+*.dll.config
+*.exe.config
+
+# Visual Studio 2022 FileContentIndex
+**/.vs/**/FileContentIndex/
+**/*.vsidx

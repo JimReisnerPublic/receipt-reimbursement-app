@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursementapi\\receiptreimbursementapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|solutionrelative:receiptreimbursementapi\\receiptreimbursementapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|solutionrelative:receiptreimbursementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursementapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|solutionrelative:receiptreimbursementapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|solutionrelative:receiptreimbursementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6563574:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReceiptReimbursementApi",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj",
+              "RelativeDocumentMoniker": "ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj*",
+              "RelativeToolTip": "ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-14T01:21:46.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\appsettings.json",
+              "RelativeDocumentMoniker": "ReceiptReimbursementApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\appsettings.json",
+              "RelativeToolTip": "ReceiptReimbursementApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-14T00:11:38.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ReceiptReimbursementApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ReceiptReimbursementApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-14T00:08:03.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\Program.cs",
+              "RelativeDocumentMoniker": "ReceiptReimbursementApi\\Program.cs",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\Program.cs",
+              "RelativeToolTip": "ReceiptReimbursementApi\\Program.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAADwv2gAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T11:39:43.826Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

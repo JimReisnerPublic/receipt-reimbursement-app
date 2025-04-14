@@ -1,0 +1,17 @@
+<div class="app-container">
+  <header class="app-header">
+    <h1>Receipt Reimbursement System</h1>
+    <nav class="main-nav">
+      <a [routerLink]="['/receipt-form']" routerLinkActive="active">Submit Receipt</a>
+      <a [routerLink]="['/receipts']" routerLinkActive="active">View Receipts</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2025 Receipt Reimbursement System</p>
+  </footer>
+</div>

@@ -1,0 +1,11 @@
+@ReceiptReimbursementApi_HostAddress = http://localhost:5096
+
+GET {{ReceiptReimbursementApi_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{ReceiptReimbursementApi_HostAddress}}/todos/1
+Accept: application/json
+
+###
