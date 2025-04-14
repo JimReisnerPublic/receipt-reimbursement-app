@@ -20,7 +20,9 @@ namespace ReceiptReimbursement.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Your entity configurations
+            modelBuilder.Entity<Receipt>()
+                .Property(r => r.ImageLocation)  // Changed from ImageUrl
+                .HasColumnName("ImageLocation"); // Explicit column name mapping
         }
     }
 }

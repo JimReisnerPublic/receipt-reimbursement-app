@@ -5,7 +5,7 @@ export interface Receipt {
   description: string;
   category: string;
   status: string;
-  imageUrl?: string;
+  imageLocation?: string;  // Changed from imageUrl
   submissionDate: Date;
 }
 

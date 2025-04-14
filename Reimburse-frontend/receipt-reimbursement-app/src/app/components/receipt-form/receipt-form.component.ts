@@ -26,7 +26,7 @@ export class ReceiptFormComponent {
       amount: ['', [Validators.required, Validators.min(0.01)]],
       description: ['', [Validators.required, Validators.maxLength(500)]],
       category: ['', Validators.required],
-      imageUrl: ['']
+      imageLocation: ['']  // Changed from imageUrl
     });
   }
 

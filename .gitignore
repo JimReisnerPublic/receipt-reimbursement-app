@@ -15,6 +15,7 @@ Thumbs.db
 *.index
 *.dat
 *.db
+.vs/
 
 # --- Reimburse-frontend (Angular) ---
 # Node modules and dependencies

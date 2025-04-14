@@ -9,6 +9,6 @@ public class Receipt
     public string Description { get; set; }
     public string Category { get; set; }
     public string Status { get; set; }
-    public string ImageUrl { get; set; }
+    public string ImageLocation { get; set; } // Changed from ImageUrl
     public DateTime SubmissionDate { get; set; }
 }
