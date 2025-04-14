@@ -1,1 +1,40 @@
-<p>receipt-list works!</p>
+<div class="receipt-list-container">
+    <h2>
+      <span class="icon">🧾</span>
+      Receipt List
+    </h2>
+    <div class="table-responsive">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let receipt of receipts">
+            <td>{{ receipt.date | date:'mediumDate' }}</td>
+            <td>{{ receipt.amount | currency }}</td>
+            <td class="desc-cell" title="{{ receipt.description }}">{{ receipt.description }}</td>
+            <td>{{ receipt.category }}</td>
+            <td>
+              <span [ngClass]="{
+                'status-approved': receipt.status === 'Approved',
+                'status-pending': receipt.status === 'Pending',
+                'status-rejected': receipt.status === 'Rejected'
+              }">
+                {{ receipt.status }}
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="receipts.length === 0">
+            <td colspan="5" class="no-data">No receipts found.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

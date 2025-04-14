@@ -11,6 +11,7 @@ namespace ReceiptReimbursementApi
     [JsonSerializable(typeof(List<Employee>))]
     [JsonSerializable(typeof(ReceiptEmailSubmission))]
     [JsonSerializable(typeof(ErrorResponse))]
+    [JsonSerializable(typeof(IEnumerable<Receipt>))]
     public partial class AppJsonSerializerContext : JsonSerializerContext
     {
     }
