@@ -109,9 +109,9 @@ Upload a receipt file (PDF/JPG/PNG).
 Submit the form to save the receipt.
 
 Estimated vs Actual Time Spent
-Estimated Time: 6 hours
+Estimated Time: 5 hours
 
-Actual Time: 7 hours
+Actual Time: 10 hours
 
 Additional time was spent debugging JSON serialization issues with NativeAOT and ensuring proper error handling for file uploads.
 
