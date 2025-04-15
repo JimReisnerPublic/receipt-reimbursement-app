@@ -7,13 +7,6 @@ A backend API built with .NET
 
 A MySQL database for storing receipt and employee data
 
-## Features
-Submit a receipt with:
-
-Date
-
-Amount
-
 ## Description
 
 Receipt file upload
