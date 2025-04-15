@@ -48,7 +48,7 @@
       
       <div class="form-group">
         <label for="receiptFile">Receipt File</label>
-        <input type="file" id="receiptFile" (change)="onFileSelected($event)" accept=".pdf,.jpg,.jpeg,.png">
+        <input #fileInput type="file" id="receiptFile" (change)="onFileSelected($event)" accept=".pdf,.jpg,.jpeg,.png">
         <div *ngIf="receiptForm.get('receiptFile')?.invalid && receiptForm.get('receiptFile')?.touched" class="error-message">
           Valid receipt file is required (PDF, JPG, PNG)
         </div>

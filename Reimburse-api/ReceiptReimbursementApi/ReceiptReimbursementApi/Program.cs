@@ -59,7 +59,6 @@ builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options =
 });
 
 var app = builder.Build();
-//app.UsePathBase("/api");
 
 // Configure the HTTP request pipeline
 
@@ -72,9 +71,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors("AllowAngularApp");
 
-// Define API endpoints using Minimal API style
-
-// Receipts endpoints
 app.MapGet("/api/receipts", async (IReceiptService service) =>
 {
     var receipts = await service.GetReceiptsAsync();
@@ -246,65 +242,6 @@ app.MapPatch("/api/receipts/{id}/status", async (int id, string status, IReceipt
 .WithName("UpdateReceiptStatus")
 .WithOpenApi(operation => {
     operation.Summary = "Updates the status of a receipt";
-    return operation;
-});
-
-// Employees endpoints
-app.MapGet("/api/employees", async (IEmployeeService service) =>
-{
-    var employees = await service.GetEmployeesAsync();
-    return Results.Ok(employees);
-})
-.WithName("GetAllEmployees")
-.WithOpenApi(operation => {
-    operation.Summary = "Gets all employees";
-    return operation;
-});
-
-app.MapGet("/api/employees/{id}", async (int id, IEmployeeService service) =>
-{
-    var employee = await service.GetEmployeeByIdAsync(id);
-    return employee != null ? Results.Ok(employee) : Results.NotFound();
-})
-.WithName("GetEmployeeById")
-.WithOpenApi(operation => {
-    operation.Summary = "Gets an employee by ID";
-    return operation;
-});
-
-app.MapPost("/api/employees", async (Employee employee, IEmployeeService service) =>
-{
-    var newEmployee = await service.CreateEmployeeAsync(employee);
-    return Results.Created($"/api/employees/{newEmployee.Id}", newEmployee);
-})
-.WithName("CreateEmployee")
-.WithOpenApi(operation => {
-    operation.Summary = "Creates a new employee";
-    return operation;
-});
-
-app.MapPut("/api/employees/{id}", async (int id, Employee employee, IEmployeeService service) =>
-{
-    if (id != employee.Id)
-        return Results.BadRequest(new { Message = "ID mismatch" });
-
-    var success = await service.UpdateEmployeeAsync(employee);
-    return success ? Results.NoContent() : Results.NotFound();
-})
-.WithName("UpdateEmployee")
-.WithOpenApi(operation => {
-    operation.Summary = "Updates an existing employee";
-    return operation;
-});
-
-app.MapDelete("/api/employees/{id}", async (int id, IEmployeeService service) =>
-{
-    var success = await service.DeleteEmployeeAsync(id);
-    return success ? Results.NoContent() : Results.NotFound();
-})
-.WithName("DeleteEmployee")
-.WithOpenApi(operation => {
-    operation.Summary = "Deletes an employee";
     return operation;
 });
 

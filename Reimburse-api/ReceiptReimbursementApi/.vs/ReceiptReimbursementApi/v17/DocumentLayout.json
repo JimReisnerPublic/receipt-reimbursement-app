@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{24DF1089-FD0C-4BCA-862A-781353E65C3A}|ReceiptReimbursement.Data\\ReceiptReimbursement.Data.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursement.data\\receiptrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24DF1089-FD0C-4BCA-862A-781353E65C3A}|ReceiptReimbursement.Data\\ReceiptReimbursement.Data.csproj|solutionrelative:receiptreimbursement.data\\receiptrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursementapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|solutionrelative:receiptreimbursementapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|solutionrelative:receiptreimbursementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5690D682-C140-4E33-95C8-450F286DDA51}|ReceiptReimbursement.Models\\ReceiptReimbursement.Models.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursement.models\\datatransferobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5690D682-C140-4E33-95C8-450F286DDA51}|ReceiptReimbursement.Models\\ReceiptReimbursement.Models.csproj|solutionrelative:receiptreimbursement.models\\datatransferobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5690D682-C140-4E33-95C8-450F286DDA51}|ReceiptReimbursement.Models\\ReceiptReimbursement.Models.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursement.models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5690D682-C140-4E33-95C8-450F286DDA51}|ReceiptReimbursement.Models\\ReceiptReimbursement.Models.csproj|solutionrelative:receiptreimbursement.models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5690D682-C140-4E33-95C8-450F286DDA51}|ReceiptReimbursement.Models\\ReceiptReimbursement.Models.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursement.models\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5690D682-C140-4E33-95C8-450F286DDA51}|ReceiptReimbursement.Models\\ReceiptReimbursement.Models.csproj|solutionrelative:receiptreimbursement.models\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5690D682-C140-4E33-95C8-450F286DDA51}|ReceiptReimbursement.Models\\ReceiptReimbursement.Models.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursement.models\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5690D682-C140-4E33-95C8-450F286DDA51}|ReceiptReimbursement.Models\\ReceiptReimbursement.Models.csproj|solutionrelative:receiptreimbursement.models\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E4A1468-8A16-4BA5-851E-CE807C4619D2}|ReceiptService\\ReceiptService.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptservice\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E4A1468-8A16-4BA5-851E-CE807C4619D2}|ReceiptService\\ReceiptService.csproj|solutionrelative:receiptservice\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E4A1468-8A16-4BA5-851E-CE807C4619D2}|ReceiptService\\ReceiptService.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptservice\\receiptservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E4A1468-8A16-4BA5-851E-CE807C4619D2}|ReceiptService\\ReceiptService.csproj|solutionrelative:receiptservice\\receiptservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|solutionrelative:receiptreimbursementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursementapi\\jsonserializerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FC36043-4B8E-4716-ADE0-ED54AB070007}|ReceiptReimbursementApi\\ReceiptReimbursementApi.csproj|solutionrelative:receiptreimbursementapi\\jsonserializerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24DF1089-FD0C-4BCA-862A-781353E65C3A}|ReceiptReimbursement.Data\\ReceiptReimbursement.Data.csproj|c:\\users\\jimre\\source\\repos\\empreimburse\\reimburse-api\\receiptreimbursementapi\\receiptreimbursement.data\\receiptrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24DF1089-FD0C-4BCA-862A-781353E65C3A}|ReceiptReimbursement.Data\\ReceiptReimbursement.Data.csproj|solutionrelative:receiptreimbursement.data\\receiptrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,20 +62,124 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataTransferObjects.cs",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Models\\DataTransferObjects.cs",
+              "RelativeDocumentMoniker": "ReceiptReimbursement.Models\\DataTransferObjects.cs",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Models\\DataTransferObjects.cs",
+              "RelativeToolTip": "ReceiptReimbursement.Models\\DataTransferObjects.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:32:07.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Models\\Employee.cs",
+              "RelativeDocumentMoniker": "ReceiptReimbursement.Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Models\\Employee.cs",
+              "RelativeToolTip": "ReceiptReimbursement.Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:32:04.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ErrorResponse.cs",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Models\\ErrorResponse.cs",
+              "RelativeDocumentMoniker": "ReceiptReimbursement.Models\\ErrorResponse.cs",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Models\\ErrorResponse.cs",
+              "RelativeToolTip": "ReceiptReimbursement.Models\\ErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:32:01.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Receipt.cs",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Models\\Receipt.cs",
+              "RelativeDocumentMoniker": "ReceiptReimbursement.Models\\Receipt.cs",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Models\\Receipt.cs",
+              "RelativeToolTip": "ReceiptReimbursement.Models\\Receipt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:31:50.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptService\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "ReceiptService\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptService\\EmployeeService.cs",
+              "RelativeToolTip": "ReceiptService\\EmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:30:57.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReceiptService.cs",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptService\\ReceiptService.cs",
+              "RelativeDocumentMoniker": "ReceiptService\\ReceiptService.cs",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptService\\ReceiptService.cs",
+              "RelativeToolTip": "ReceiptService\\ReceiptService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:30:41.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ReceiptReimbursementApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ReceiptReimbursementApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-15T10:45:06.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\appsettings.json",
+              "RelativeDocumentMoniker": "ReceiptReimbursementApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\appsettings.json",
+              "RelativeToolTip": "ReceiptReimbursementApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-14T23:38:28.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ReceiptRepository.cs",
               "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Data\\ReceiptRepository.cs",
               "RelativeDocumentMoniker": "ReceiptReimbursement.Data\\ReceiptRepository.cs",
               "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursement.Data\\ReceiptRepository.cs",
               "RelativeToolTip": "ReceiptReimbursement.Data\\ReceiptRepository.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAIAwwCYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T19:00:24.922Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "JsonSerializerConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\JsonSerializerConfiguration.cs",
               "RelativeDocumentMoniker": "ReceiptReimbursementApi\\JsonSerializerConfiguration.cs",
@@ -62,7 +198,7 @@
               "RelativeDocumentMoniker": "ReceiptReimbursementApi\\Program.cs",
               "ToolTip": "C:\\Users\\jimre\\source\\repos\\EmpReimburse\\Reimburse-api\\ReceiptReimbursementApi\\ReceiptReimbursementApi\\Program.cs",
               "RelativeToolTip": "ReceiptReimbursementApi\\Program.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAkwPkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T11:39:43.826Z",
               "EditorCaption": ""

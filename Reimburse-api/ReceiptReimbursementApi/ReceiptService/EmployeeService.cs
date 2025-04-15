@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using ReceiptReimbursement.Data;
 using ReceiptReimbursement.Models;
 
+//NOTE: This service is not used at this point, 
+//as the instructions specified minimal functionality
 namespace ReceiptReimbursement.Services
 {
     public class EmployeeService : IEmployeeService

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ReceiptService } from '../../services/receipt.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-receipt-form',
@@ -13,6 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 
 export class ReceiptFormComponent {
+  @ViewChild('fileInput') fileInput!: ElementRef;
   receiptForm: FormGroup;
   selectedFile: File | null = null;
   categories: string[] = ['Travel', 'Meals', 'Office Supplies', 'Equipment', 'Other'];
@@ -61,10 +63,11 @@ onSubmit(): void {
     const formData = new FormData();
     const { employeeEmail, date, amount, description, category } = this.receiptForm.value;
 
-    const parsedDate = new Date(date);
+    //const parsedDate = new Date(date);
 
     formData.append('employeeEmail', employeeEmail);
-    formData.append('date', parsedDate.toISOString());
+    //formData.append('date', parsedDate.toISOString());
+    formData.append('date', date);
     formData.append('amount', amount);
     formData.append('description', description);
     formData.append('category', category);
@@ -74,12 +77,21 @@ onSubmit(): void {
       next: () => {
         alert('Receipt submitted successfully!');
         // Reset the form and clear the file
+        this.fileInput.nativeElement.value = '';
         this.receiptForm.reset();
         this.selectedFile = null;
-        
         // Reset the date field to today's date
         const today = new Date().toISOString().substring(0, 10);
         this.receiptForm.patchValue({ date: today });
+        
+        // Reset validation states
+        Object.keys(this.receiptForm.controls).forEach(key => {
+          this.receiptForm.get(key)?.setErrors(null);
+          this.receiptForm.get(key)?.markAsUntouched();
+        });
+        // Reset the date field to today's date
+       // const today = new Date().toISOString().substring(0, 10);
+        //this.receiptForm.patchValue({ date: today });
         this.router.navigate(['/receipt-form']);
       },
       error: (err) => {
